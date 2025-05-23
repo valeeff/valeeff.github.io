@@ -4,11 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles.css" />
-  <title>What did I do today?</title>
+  <title>Valentina Ferretti</title>
+ <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>What did I do and learn today?</h1>
-  <img src="images/Leonardo_selfportrait.jpg" alt="motivation photo, Leonardo da Vinci_selfportrait" />
-  <p>What I've achieved:</p>
+  <header class="profile-header">
+    <img src="images/valentina.jpg" alt="Valentina Ferretti" class="profile-photo">
+    <div>
+      <h1 class="profile-name">Valentina Ferretti</h1>
+      <p class="profile-desc">I learn. I build.</p>
+      <div class="profile-links">
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn">
+          <img src="images/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/your-github" target="_blank" aria-label="GitHub">
+          <img src="images/github.svg" alt="GitHub" />
+        </a>
+        <a href="mailto:your@email.com" aria-label="Email">
+          <img src="images/email.svg" alt="Email" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="segmented-control">
+      <button class="tab active" data-tab="recently">Recently</button>
+      <button class="tab" data-tab="archive">Archive</button>
+    </div>
+    <section id="recently" class="tab-content active">
+      <ul class="post-list">
+        <li class="post-item">
+          <div class="post-info">
+            <h2 class="post-title">ArtAlert</h2>
+            <p class="post-desc">A personal project to track limited spots at art and cultural venues—so I don’t miss a chance to visit.</p>
+            <div class="post-meta">May 10, 2025 · Valentina Ferretti</div>
+          </div>
+          <img src="images/artalert-thumb.png" alt="ArtAlert app screenshot" class="post-thumb">
+        </li>
+        <li class="post-item">
+          <div class="post-info">
+            <h2 class="post-title">FigmaPlugin_Auto_device_switcher</h2>
+            <p class="post-desc">A Figma plugin to automatically switch device frames for responsive design previews.</p>
+            <div class="post-meta">Apr 2, 2025 · Valentina Ferretti</div>
+          </div>
+          <img src="images/figma-plugin-thumb.png" alt="Figma Plugin screenshot" class="post-thumb">
+        </li>
+      </ul>
+    </section>
+    <section id="archive" class="tab-content">
+      <p>waiting for ChatGPT to upload all my previous works.</p>
+    </section>
+  </main>
+
+  <script>
+    // Simple tab switcher
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

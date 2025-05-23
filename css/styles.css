@@ -1,4 +1,4 @@
-body {
+/*body {
   background: #fff;
   color: #222;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -75,3 +75,144 @@ section {
     font-size: 1.6em;
   }
 }
+*/
+
+/* ...existing code... */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.profile-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.profile-name {
+  margin: 0 0 0.2em 0;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+.profile-desc {
+  margin: 0 0 0.7em 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.profile-links a {
+  margin-right: 0.7em;
+  display: inline-block;
+  vertical-align: middle;
+}
+.profile-links img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.profile-links img:hover {
+  opacity: 1;
+}
+
+.segmented-control {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 2em;
+  background: #f5f5f7;
+  border-radius: 8px;
+  padding: 0.3em;
+  width: fit-content;
+}
+
+.segmented-control .tab {
+  background: none;
+  border: none;
+  padding: 0.6em 1.5em;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #222;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.segmented-control .tab.active {
+  background: #fff;
+  color: #0070f3;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 2em 0;
+  gap: 1.5em;
+}
+.post-item:last-child {
+  border-bottom: none;
+}
+.post-info {
+  flex: 1 1 0;
+}
+.post-title {
+  margin: 0 0 0.2em 0;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.post-desc {
+  margin: 0 0 0.8em 0;
+  color: #444;
+}
+.post-meta {
+  font-size: 0.95em;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.post-thumb {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f5f5f7;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  .post-item {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .post-thumb {
+    width: 100%;
+    height: 140px;
+  }
+}
+
+/* ...existing code... */
