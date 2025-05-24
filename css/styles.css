@@ -216,3 +216,49 @@ section {
 }
 
 /* ...existing code... */
+
+/* ...existing code... */
+
+body {
+  font-family: 'Bricolage Grotesque', 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Profile photo: bigger, rectangular, border-radius 8px */
+.profile-photo {
+  width: 180px;                                                     
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+/* Thumbnails 3x bigger */
+.post-thumb {
+  width: 288px;
+  height: 288px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f5f5f7;
+  flex-shrink: 0;
+}
+
+.rect-thumb {
+  width: 288px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.center-thumb {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
