@@ -33,8 +33,9 @@
 
     <main>
       <div class="segmented-control">
-        <button class="tab active" data-tab="recently">Recently</button>
-        <button class="tab" data-tab="archive">Archive</button>
+       <button class="tab active" data-tab="recently">Recently</button>
+       <button class="tab" data-tab="archive">Archive</button>
+       <button class="tab" data-tab="prompts">Prompts</button>
       </div>
       <section id="recently" class="tab-content active">
         <ul class="post-list">
@@ -59,6 +60,36 @@
       <section id="archive" class="tab-content">
         <p>Waiting for ChatGPT to upload all my previous works.</p>
       </section>
+      <!-- ...existing code... -->
+
+<section id="prompts" class="tab-content">
+  <div class="prompt-tile">
+    <div class="prompt-header">
+      <span class="prompt-tag">Figma Make</span>
+      <h2 class="prompt-title">Viewport Selector</h2>
+    </div>
+    <textarea class="prompt-desc-input" placeholder="Paste your description here..." rows="3"></textarea>
+    <div class="prompt-box">
+      <p>
+        Add a temporary segmented control 4px above the design with three options: Desktop (1280px+), Tablet(768-1279px), and Mobile (&gt;375px).<br>
+        - Each segment should let me switch between the corresponding viewport frames during prototyping.<br>
+        - The application should resize dynamically based on selected viewport<br>
+        - Add visual borders for all the viewports
+      </p>
+      <div class="prompt-actions">
+        <button class="icon-btn" title="Copy"><img src="Images/copy.svg" alt="Copy"></button>
+        <button class="icon-btn" title="Share"><img src="Images/share.svg" alt="Share"></button>
+      </div>
+    </div>
+    <div class="prompt-images">
+      <!-- Images will be uploaded here -->
+      <img src="" alt="Prompt image 1" class="prompt-img" style="display:none;">
+      <img src="" alt="Prompt image 2" class="prompt-img" style="display:none;">
+      <img src="" alt="Prompt image 3" class="prompt-img" style="display:none;">
+    </div>
+  </div>
+</section>
+<!-- ...then comes </main> ... -->
     </main>
   </div>
   <script>
